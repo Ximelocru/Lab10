@@ -37,7 +37,7 @@ public class Main3 {
             // Cifrar el texto
             byte[] textoCifrado = Simetrico.cifrar(secretKey, mensaje);
             System.out.print("Texto cifrado (bytes): ");
-            imprimir(textoCifrado);
+            imprimir(textoCifrado); 
 
             FileOutputStream archivoTexto = new FileOutputStream(ARCHIVO_CIFRADO);
             ObjectOutputStream oosTexto = new ObjectOutputStream(archivoTexto);
