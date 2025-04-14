@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Leer texto por teclado
+            long tiempoInicial = System.nanoTime();
             Scanner scanner = new Scanner(System.in);
             System.out.print("Ingrese un mensaje para cifrar: ");
             String mensaje = scanner.nextLine();
@@ -36,6 +37,8 @@ public class Main {
             // Convertir byte[] a String
             String textoRecuperado = new String(textoDescifrado);
             System.out.println("Texto recuperado: " + textoRecuperado);
+            long tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo que tarda: "+(tiempoFinal-tiempoInicial));
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
